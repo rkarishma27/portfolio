@@ -114,7 +114,7 @@
         </ul>
     </nav>
     <div class="hero" id="home">
-        <h1>✨ Welcome Student ✨</h1>
+        <h1> Welcome! </h1>
         <p id="dateTime"></p>
     </div>
     <div class="container">
@@ -162,7 +162,6 @@
     // Date & Time
     function updateTime(){
         let now = new Date();
-
         document.getElementById("dateTime")
         .innerHTML = now.toLocaleString();
     }
@@ -183,51 +182,40 @@
     }
     // Background changer
     function changeBackground(){
-
         let colors=[
             "linear-gradient(to right,#89f7fe,#66a6ff)",
             "linear-gradient(to right,#ff9a9e,#fad0c4)",
             "linear-gradient(to right,#84fab0,#8fd3f4)",
             "linear-gradient(to right,#a18cd1,#fbc2eb)"
         ];
-
         let random=
         colors[Math.floor(Math.random()*colors.length)];
-
         document.body.style.background=random;
     }
-
     // Dark mode
     function toggleMode(){
         document.body.classList.toggle("dark-mode");
     }
-
     // Counter
     let count=0;
-
     function increase(){
         count++;
         document.getElementById("count").innerHTML=count;
     }
-
     function decrease(){
         count--;
         document.getElementById("count").innerHTML=count;
     }
-
     // Quote generator
     function generateQuote(){
-
         let quotes=[
             "Success comes from consistency.",
             "Dream big and work hard.",
             "Code, learn, improve, repeat.",
             "Every expert was once a beginner."
         ];
-
         let randomQuote=
         quotes[Math.floor(Math.random()*quotes.length)];
-
         document.getElementById("quoteText")
         .innerHTML=randomQuote;
     }
